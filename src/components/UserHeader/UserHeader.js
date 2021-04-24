@@ -24,11 +24,11 @@ const UserHeader = ({ user }) => {
           </h4>
           <p>{user.basics.label}</p>
           <p>Coding in {user.basics.region}</p>
-          <p>
+          {/* <p>
             {user.basics.yearsOfExperience} years of experience as a developer
-          </p>
+          </p> */}
           <p>{user.basics.headline}</p>
-          <p>
+          {/* <p>
             Blog:{' '}
             <a
               href={user.basics.blog}
@@ -37,7 +37,7 @@ const UserHeader = ({ user }) => {
             >
               {user.basics.blog}
             </a>
-          </p>
+          </p> */}
         </div>
       </Header>
       <div>
