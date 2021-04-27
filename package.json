@@ -2,7 +2,7 @@
   "name": "gitconnected-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://koglesby.github.io/react-portfolio",
+  "homepage": "http://kevinoglesby.com",
   "dependencies": {
     "@carbon/icons-react": "^10.29.0",
     "@carbon/themes": "^10.31.0",
