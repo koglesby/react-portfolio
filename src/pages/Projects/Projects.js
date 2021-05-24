@@ -19,7 +19,6 @@ const Projects = ({ user }) => {
           </div>
         </div>
         {user.projects.map((project, i) => {
-          console.log('project', project.website);
           const image = project.images[0];
           return (
             <ProjectItem key={i} className="bx--row">
