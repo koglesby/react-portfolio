@@ -1,26 +1,67 @@
 import React from 'react';
+import { Tile, Link, Tag } from 'carbon-components-react';
 import Layout from '../../components/Layout';
-import { SectionTitle, Pill } from '../../styles';
-import { ProjectItem, ProjectTitle, SkillContainer } from './styles';
+import { SectionTitle } from '../../styles';
+import {
+  ProjectItem,
+  ProjectTitle,
+  SkillContainer,
+  ProjectImage,
+} from './styles';
 
 const Projects = ({ user }) => {
   return (
     <Layout user={user}>
-      <div>
-        <SectionTitle>Projects</SectionTitle>
-        <ul>
-          {user.projects.map((project, i) => (
-            <ProjectItem key={i}>
-              <ProjectTitle>{project.name}</ProjectTitle>
-              <p>{project.summary}</p>
-              <SkillContainer>
-                {[...project.languages, ...project.libraries].map((item, j) => (
-                  <Pill key={j}>{item}</Pill>
-                ))}
-              </SkillContainer>
+      <div className="bx--grid">
+        <div className="bx--row">
+          <div className="bx--col-sm-4 bx--col-lg-8">
+            <SectionTitle>Projects</SectionTitle>
+          </div>
+        </div>
+        {user.projects.map((project, i) => {
+          console.log('project', project.website);
+          const image = project.images[0];
+          return (
+            <ProjectItem key={i} className="bx--row">
+              <div className="bx--col">
+                <Tile className="bx--grid">
+                  <div className="bx--row">
+                    <div className="bx--col-sm-4 bx--col-lg-8">
+                      <ProjectTitle>
+                        <a href={project.repositoryUrl}>{project.name}</a>
+                      </ProjectTitle>
+                    </div>
+                  </div>
+                  <div className="bx--row">
+                    <div className="bx--col">
+                      <p>{project.description}</p>
+                      <br />
+                      <Link href={project.website}>View Project</Link>
+                    </div>
+                    {image ? (
+                      <div className="bx--col-sm-0 bx--col-md-3">
+                        <ProjectImage
+                          src={image.resolutions.desktop.url}
+                        ></ProjectImage>
+                      </div>
+                    ) : null}
+                  </div>
+                  <div className="bx--row">
+                    <div className="bx--col">
+                      <SkillContainer>
+                        {[...project.languages, ...project.libraries].map(
+                          (item, j) => (
+                            <Tag key={j}>{item}</Tag>
+                          )
+                        )}
+                      </SkillContainer>
+                    </div>
+                  </div>
+                </Tile>
+              </div>
             </ProjectItem>
-          ))}
-        </ul>
+          );
+        })}
       </div>
     </Layout>
   );
