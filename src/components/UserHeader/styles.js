@@ -18,3 +18,16 @@ export const Image = styled.img`
   max-width: 200px;
   border-radius: 3px;
 `;
+
+export const ProfileLink = styled.li`
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-size: 1rem;
+`;
+
+export const EmailIcon = styled.span`
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+`;

@@ -4,7 +4,7 @@ import { white } from '@carbon/colors';
 export const WorkItem = styled.div`
   margin-top: 1rem;
   padding-bottom: 1rem;
-  border-bottom: 1px solid ${white};
+  // border-bottom: 1px solid ${white};
 `;
 
 export const WorkTitle = styled.h4`

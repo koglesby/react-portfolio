@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { ArrowRight16 } from '@carbon/icons-react';
+import { ArrowRight16, Email16 } from '@carbon/icons-react';
 import { Button } from 'carbon-components-react';
 
-import { HeaderContainer, Image } from './styles';
+import { HeaderContainer, Image, EmailIcon } from './styles';
 
 const UserHeader = ({ user }) => {
   const location = useLocation();
@@ -16,18 +16,55 @@ const UserHeader = ({ user }) => {
         <div className="bx--col-md-4 bx--col-lg-6">
           <div>
             <h2>{user.basics.name}</h2>
-            <h4>
+            <p>{user.basics.label}</p>
+            <p>Coding from {user.basics.region}</p>
+            <p>{user.basics.headline}</p>
+            {/* email data should be found on user.basics.email, but it is missing */}
+            <p>
+              <a href="mailto:kevinjoglesby@gmail.com">
+                <EmailIcon>
+                  <Email16 />
+                </EmailIcon>
+                kevinjoglesby@gmail.com
+              </a>
+            </p>
+            <p>
               <a
-                href={`https://gitconnected.com/${user.basics.username}`}
+                href={
+                  user.basics.profiles.find(
+                    (profile) => profile.network === 'GitHub'
+                  ).url
+                }
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                @{user.basics.username}
+                GitHub
               </a>
-            </h4>
-            <p>{user.basics.label}</p>
-            <p>Coding in {user.basics.region}</p>
-            <p>{user.basics.headline}</p>
+              {' | '}
+              <a
+                href={
+                  user.basics.profiles.find(
+                    (profile) => profile.network === 'LinkedIn'
+                  ).url
+                }
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                LinkedIn
+              </a>
+              {' | '}
+              <a
+                href={
+                  user.basics.profiles.find(
+                    (profile) => profile.network === 'gitconnected'
+                  ).url
+                }
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                gitconnected
+              </a>
+            </p>
           </div>
         </div>
         <div className="bx--col-md-2">
