@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag } from 'carbon-components-react';
+import { Tag, Button, Tile } from 'carbon-components-react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
 
@@ -16,13 +16,13 @@ const Me = ({ user }) => {
         <br></br>
         <div className="bx--row">
           <div className="bx--col">
-            <SectionTitle>Skills</SectionTitle>
+            <SectionTitle>Skills, Libraries, Tools</SectionTitle>
           </div>
         </div>
         <div className="bx--row">
           <div className="bx--col">
             {user.skills.map((skill) => (
-              <Tag type="cyan" key={skill.name}>
+              <Tag type="blue" key={skill.name}>
                 {skill.name}
               </Tag>
             ))}

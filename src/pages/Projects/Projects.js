@@ -27,15 +27,29 @@ const Projects = ({ user }) => {
                   <div className="bx--row">
                     <div className="bx--col-sm-4 bx--col-lg-8">
                       <ProjectTitle>
-                        <a href={project.repositoryUrl}>{project.name}</a>
+                        <a
+                          href={project.website}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          {project.summary}
+                        </a>
                       </ProjectTitle>
                     </div>
                   </div>
                   <div className="bx--row">
                     <div className="bx--col">
                       <p>{project.description}</p>
-                      <br />
-                      <Link href={project.website}>View Project</Link>
+                      <br></br>
+                      <div>
+                        <Link
+                          href={project.repositoryUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                        >
+                          GitHub Repo
+                        </Link>
+                      </div>
                     </div>
                     {image ? (
                       <div className="bx--col-sm-0 bx--col-md-3">
