@@ -4,6 +4,7 @@ import { ArrowRight16, Email16 } from '@carbon/icons-react';
 import { Button } from 'carbon-components-react';
 
 import { HeaderContainer, Image, EmailIcon } from './styles';
+import Pdf from './../../documents/Kevin-Oglesby-Resume.pdf';
 
 const UserHeader = ({ user }) => {
   const location = useLocation();
@@ -68,9 +69,17 @@ const UserHeader = ({ user }) => {
           </div>
         </div>
         <div className="bx--col-md-2">
-          <Button
+          {/* <Button
             renderIcon={ArrowRight16}
             href={`https://gitconnected.com/${user.basics.username}/resume`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Résumé
+          </Button> */}
+          <Button
+            renderIcon={ArrowRight16}
+            href={Pdf}
             target="_blank"
             rel="noopener noreferrer"
           >
