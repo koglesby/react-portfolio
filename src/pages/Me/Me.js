@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tag, Button, Tile } from 'carbon-components-react';
+import { Tag } from 'carbon-components-react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
 
