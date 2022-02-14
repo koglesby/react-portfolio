@@ -53,18 +53,6 @@ const UserHeader = ({ user }) => {
               >
                 LinkedIn
               </a>
-              {' | '}
-              <a
-                href={
-                  user.basics.profiles.find(
-                    (profile) => profile.network === 'gitconnected'
-                  ).url
-                }
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                gitconnected
-              </a>
             </p>
           </div>
         </div>
