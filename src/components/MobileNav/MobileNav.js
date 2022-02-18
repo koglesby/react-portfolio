@@ -24,11 +24,11 @@ const MobileNav = () => {
             tooltipPosition="bottom"
           />
         </NavLink>
-        <NavLink to="/work">
+        <NavLink to="/experience">
           <NavButton
             hasIconOnly
             renderIcon={Portfolio32}
-            iconDescription="Work"
+            iconDescription="Experience"
             tooltipPosition="bottom"
           />
         </NavLink>

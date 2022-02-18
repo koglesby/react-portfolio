@@ -1,22 +1,22 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle } from './styles';
+import { ExpItem, ExpTitle, JobTitle } from './styles';
 
-const Work = ({ user }) => {
+const Experience = ({ user }) => {
   return (
     <Layout user={user}>
       <div className="bx--grid">
         <div className="bx--row">
           <div className="bx--col">
-            <SectionTitle>Work</SectionTitle>
+            <SectionTitle>Experience</SectionTitle>
           </div>
         </div>
         <div className="bx--row">
           <div className="bx--col">
             {user.work.map((work, i) => (
-              <WorkItem key={i}>
-                <WorkTitle>{work.position}</WorkTitle>
+              <ExpItem key={i}>
+                <ExpTitle>{work.position}</ExpTitle>
                 <div>
                   <JobTitle>{work.company}</JobTitle>{' '}
                   <span>{work.location}</span>
@@ -26,7 +26,7 @@ const Work = ({ user }) => {
                   </span>
                 </div>
                 <Paragraph>{work.summary}</Paragraph>
-              </WorkItem>
+              </ExpItem>
             ))}
           </div>
         </div>
@@ -35,4 +35,4 @@ const Work = ({ user }) => {
   );
 };
 
-export default Work;
+export default Experience;
