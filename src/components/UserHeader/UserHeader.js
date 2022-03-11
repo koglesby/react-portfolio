@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { ArrowRight16, Email16 } from '@carbon/icons-react';
+import { ArrowRight16 } from '@carbon/icons-react';
 import { Button } from 'carbon-components-react';
 
-import { HeaderContainer, Image, EmailIcon } from './styles';
+import { HeaderContainer, Image } from './styles';
 import Pdf from './../../documents/Kevin-Oglesby-Resume.pdf';
 
 const UserHeader = ({ user }) => {
@@ -23,9 +23,6 @@ const UserHeader = ({ user }) => {
             {/* email data should be found on user.basics.email, but it is missing */}
             <p>
               <a href="mailto:kevinjoglesby@gmail.com">
-                <EmailIcon>
-                  <Email16 />
-                </EmailIcon>
                 kevinjoglesby@gmail.com
               </a>
             </p>
@@ -57,14 +54,6 @@ const UserHeader = ({ user }) => {
           </div>
         </div>
         <div className="bx--col-md-2">
-          {/* <Button
-            renderIcon={ArrowRight16}
-            href={`https://gitconnected.com/${user.basics.username}/resume`}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            View Résumé
-          </Button> */}
           <Button
             renderIcon={ArrowRight16}
             href={Pdf}

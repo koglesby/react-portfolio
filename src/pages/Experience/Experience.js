@@ -2,6 +2,7 @@ import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
 import { ExpItem, ExpTitle, JobTitle } from './styles';
+import { Tag } from 'carbon-components-react';
 
 const Experience = ({ user }) => {
   return (
@@ -9,7 +10,16 @@ const Experience = ({ user }) => {
       <div className="bx--grid">
         <div className="bx--row">
           <div className="bx--col">
-            <SectionTitle>Experience</SectionTitle>
+            <SectionTitle>Skills &amp; Experience</SectionTitle>
+          </div>
+        </div>
+        <div className="bx--row">
+          <div className="bx--col">
+            {user.skills.map((skill) => (
+              <Tag type="blue" key={skill.name}>
+                {skill.name}
+              </Tag>
+            ))}
           </div>
         </div>
         <div className="bx--row">

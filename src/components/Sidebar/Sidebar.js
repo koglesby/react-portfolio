@@ -10,7 +10,7 @@ import { StyledSideNav } from './styles';
 const items = [
   { name: 'Me', path: '/' },
   { name: 'Projects', path: '/projects' },
-  { name: 'Experience', path: '/experience' },
+  { name: 'Skills & Experience', path: '/experience' },
   { name: 'Education', path: '/education' },
 ];
 
