@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/static/css/main.e444d5b3.chunk.css",
-    "main.js": "/static/js/main.b0e1e210.chunk.js",
-    "main.js.map": "/static/js/main.b0e1e210.chunk.js.map",
+    "main.js": "/static/js/main.2b737d10.chunk.js",
+    "main.js.map": "/static/js/main.2b737d10.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.5274bbb7.js",
     "runtime-main.js.map": "/static/js/runtime-main.5274bbb7.js.map",
-    "static/js/2.be1914a5.chunk.js": "/static/js/2.be1914a5.chunk.js",
-    "static/js/2.be1914a5.chunk.js.map": "/static/js/2.be1914a5.chunk.js.map",
+    "static/js/2.897822e4.chunk.js": "/static/js/2.897822e4.chunk.js",
+    "static/js/2.897822e4.chunk.js.map": "/static/js/2.897822e4.chunk.js.map",
     "static/js/3.f856aa9b.chunk.js": "/static/js/3.f856aa9b.chunk.js",
     "static/js/3.f856aa9b.chunk.js.map": "/static/js/3.f856aa9b.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.e444d5b3.chunk.css.map": "/static/css/main.e444d5b3.chunk.css.map",
-    "static/js/2.be1914a5.chunk.js.LICENSE.txt": "/static/js/2.be1914a5.chunk.js.LICENSE.txt",
-    "static/media/Kevin-Oglesby-Resume.0ab71b97.pdf": "/static/media/Kevin-Oglesby-Resume.0ab71b97.pdf"
+    "static/js/2.897822e4.chunk.js.LICENSE.txt": "/static/js/2.897822e4.chunk.js.LICENSE.txt",
+    "static/media/Kevin-Oglesby-Resume.b868c702.pdf": "/static/media/Kevin-Oglesby-Resume.b868c702.pdf"
   },
   "entrypoints": [
     "static/js/runtime-main.5274bbb7.js",
-    "static/js/2.be1914a5.chunk.js",
+    "static/js/2.897822e4.chunk.js",
     "static/css/main.e444d5b3.chunk.css",
-    "static/js/main.b0e1e210.chunk.js"
+    "static/js/main.2b737d10.chunk.js"
   ]
 }
