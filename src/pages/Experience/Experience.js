@@ -16,7 +16,7 @@ const Experience = ({ user }) => {
         <div className="bx--row">
           <div className="bx--col">
             {user.skills.map((skill) => (
-              <Tag type="blue" key={skill.name}>
+              <Tag type="cyan" key={skill.name}>
                 {skill.name}
               </Tag>
             ))}

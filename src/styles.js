@@ -4,6 +4,7 @@ import { blue } from '@carbon/colors';
 export const SectionTitle = styled.h3`
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  font-weight: bold;
 `;
 
 export const Paragraph = styled.p`

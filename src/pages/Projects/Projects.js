@@ -14,7 +14,7 @@ const Projects = ({ user }) => {
     <Layout user={user}>
       <div className="bx--grid">
         <div className="bx--row">
-          <div className="bx--col-sm-4 bx--col-lg-8">
+          <div className="bx--col-sm-4">
             <SectionTitle>Projects</SectionTitle>
           </div>
         </div>
@@ -26,15 +26,7 @@ const Projects = ({ user }) => {
                 <Tile className="bx--grid">
                   <div className="bx--row">
                     <div className="bx--col-sm-4 bx--col-lg-8">
-                      <ProjectTitle>
-                        <a
-                          href={project.website}
-                          target="_blank"
-                          rel="noreferrer noopener"
-                        >
-                          {project.summary}
-                        </a>
-                      </ProjectTitle>
+                      <ProjectTitle>{project.summary}</ProjectTitle>
                     </div>
                   </div>
                   <div className="bx--row">
@@ -50,9 +42,20 @@ const Projects = ({ user }) => {
                           GitHub Repo
                         </Link>
                       </div>
+                      <div>
+                        {project.website ? (
+                          <Link
+                            href={project.website}
+                            target="_blank"
+                            rel="noreferrer noopener"
+                          >
+                            Deployed App
+                          </Link>
+                        ) : null}
+                      </div>
                     </div>
                     {image ? (
-                      <div className="bx--col-sm-0 bx--col-md-3">
+                      <div className="bx--col-sm-0 bx--col-md-4">
                         <ProjectImage
                           src={image.resolutions.desktop.url}
                         ></ProjectImage>
